@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <!--
+
+  Navid mirzaaghazadeh
+  inavid.ir@gmail.com
+  https://github.com/mirzaaghazadeh
+
+ -->
+  <script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript">
+    setInterval(function() {
+
+        $.ajax({
+          url: "get.php", // PHP file name
+          context: document.body
+        }).done(function(data) {
+          $('#display').html(data); // Get and add to #display div
+        });
+
+      }, 1000) //Every 1s
+  </script>
+</head>
+
+<body>
+
+  <div id="display"></div>
+
+</body>
+
+</html>
